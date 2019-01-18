@@ -15,11 +15,11 @@ export class CurrentConditions extends Component {
 
         <div className="conditionsContent">
           
-        <ConditionIcon icon={currentConditions.weather[0].icon} />
+          <ConditionIcon icon={currentConditions.weather[0] ? currentConditions.weather[0].icon : null} />
 
           <div className="conditions">
 
-            <h3>{ currentConditions.weather[0].main }</h3>
+            <h3>{ currentConditions.weather[0] ? currentConditions.weather[0].main : 'N/A' }</h3>
 
             <p>Current Temp</p>
             <h3>{ Math.round(currentConditions.main.temp) }<sup>&deg;</sup></h3>
