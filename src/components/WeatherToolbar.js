@@ -47,7 +47,7 @@ export class WeatherToolbar extends Component {
             <div className="form-group">
               <label>Zip Code</label>
               <input
-                type="number"
+                type="text"
                 placeholder="zip code"
                 value={this.state.zipCode}
                 onChange={this.zipChanged} />
