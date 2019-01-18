@@ -54,7 +54,8 @@ export class WeatherToolbar extends Component {
               <button
                 type="submit"
                 disabled={this.zipLooksInvalid()}
-                onClick={this.zipEntered}>Get Weather</button>
+                onClick={this.zipEntered}
+                title="Get forecast for this location">Get Weather</button>
             </div>
           </form>
         </div>
