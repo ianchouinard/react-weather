@@ -10,7 +10,7 @@ export class CurrentConditions extends Component {
       <div className="currentConditions">
 
         <div className="currentConditionsMeta">
-          <h2>Current conditions for <strong>{ currentConditions.name }</strong></h2>
+          <h2>Current conditions for the <strong>{ currentConditions.name }</strong> area</h2>
         </div>
 
         <div className="conditionsContent">
