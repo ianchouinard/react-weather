@@ -1,0 +1,52 @@
+
+.currentConditions {
+  text-align: center;
+
+  .currentConditionsMeta {
+    margin-bottom: 25px;
+
+    h2 {
+      font-size: $font-med;
+      font-weight: 300;
+
+      strong {
+        font-weight: 700;
+      }
+    }
+  }
+
+  .conditionsContent {
+    display: inline-flex;
+    text-align: left;
+
+    svg {
+      max-width: 200px;
+      max-height: 200px;
+
+      path {
+        fill: $color_black;
+      }
+    }
+
+    .conditions {
+      margin-left: 25px;
+
+      p {
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .currentConditionsMeta {
+      margin-bottom: 0;
+      padding: 0 20px;
+    }
+
+    .conditionsContent {
+      display: block;
+      padding: 0 20px;
+    }
+  }
+}

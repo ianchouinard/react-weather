@@ -1,0 +1,54 @@
+.forecastScrollContainer {
+  margin-top: 40px;
+  overflow: hidden;
+
+  .scrollTitle {
+    padding-left: 15px;
+    font-weight: 700;
+  }
+
+  .scrollContainer {
+    transition: all 350ms;
+
+    .dayConditonWrapper {
+      float: left;
+      padding: 0 15px;
+    }
+
+    &:after {
+      content: '';
+        display: block;
+        clear: both;
+      }
+    }
+
+    .scrollControls {
+      padding-top: 20px;
+      text-align: center;
+
+      button {
+        margin: 0 5px;
+        background: #282828;
+        box-shadow: none;
+        outline: none;
+        border: none;
+        cursor: pointer;
+
+        svg path {
+          fill: #fff;
+        }
+
+        &:hover {
+          background: $color_bg;
+                
+          svg path {
+            fill: #282828;
+          }
+        }
+
+        &:first-of-type {
+          transform: rotate(180deg);
+        }
+      }
+    }
+}

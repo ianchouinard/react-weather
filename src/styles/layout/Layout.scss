@@ -1,0 +1,15 @@
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  margin: 0;
+  background: $color_black;
+  color: #fff;
+
+  h1 {
+    font-size: 1.15rem;
+    margin: 0;
+    padding: 0;
+  }
+}

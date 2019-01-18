@@ -1,0 +1,85 @@
+#content {
+  position: relative;
+  padding-top: 110px;
+  padding-bottom: 40px;
+  background-image:
+    linear-gradient(
+    rgba(117, 223, 250, .2), #fff,#fff
+  );
+  opacity: 0;
+  animation: fadeIn linear 1250ms forwards;
+
+  @media screen and (max-width: 500px) {
+    padding-top: 40px;
+  }
+}
+
+button[type="submit"] {
+  padding: 5px 10px;
+  background: $color_accent;
+  color: #fff;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background 250ms;
+
+  &:hover {
+    background: $color_black;
+  }
+
+  &:focus {
+    background: $color_black;
+    outline: 1px dotted $color_accent;
+  }
+
+  &[disabled] {
+    opacity: .4;
+  }
+}
+
+.loader {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 10px;
+  background: $color_accent_dark;
+  z-index: 10;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 10px;
+    background-image:
+    linear-gradient(
+      to right, 
+        $color_accent_light, transparent, $color_accent_light
+    );
+    animation: fadeInOut 1300ms linear infinite;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
