@@ -20,49 +20,49 @@ export class ConditionIcon extends Component {
     const stormIcons = ['11d', '11n']
     const snowIcons = ['13d', '13n']
     const fogIcons = ['50d', '50n']
-  
-    if (cloudIcons.includes(icon)) {
+
+    if (cloudIcons.indexOf(icon) > -1) {
       return (
         <StatusClouds />
       )
     }
 
-    if (sunnyIcons.includes(icon)) {
+    if (sunnyIcons.indexOf(icon) > -1) {
       return (
         <StatusSunny />
       )
     }
 
-    if (mostCloudIcons.includes(icon)) {
+    if (mostCloudIcons.indexOf(icon) > -1) {
       return (
         <StatusMostClouds />
       )
     }
 
-    if (rainIcons.includes(icon)) {
+    if (rainIcons.indexOf(icon) > -1) {
       return (
         <StatusRain />
       )
     }
 
-    if (stormIcons.includes(icon)) {
+    if (stormIcons.indexOf(icon) > -1) {
       return (
         <StatusStorm />
       )
     }
 
-    if (snowIcons.includes(icon)) {
+    if (snowIcons.indexOf(icon) > -1) {
       return (
         <StatusSnow />
       )
     }
 
-    if (fogIcons.includes(icon)) {
+    if (fogIcons.indexOf(icon) > -1) {
       return (
         <StatusFog />
       )
     }
-
+  
     return (
       <StatusSunny />
     )
