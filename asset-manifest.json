@@ -1,0 +1,22 @@
+{
+  "main.css": "/react-weather/static/css/main.682cf85d.chunk.css",
+  "main.js": "/react-weather/static/js/main.c48bd991.chunk.js",
+  "main.js.map": "/react-weather/static/js/main.c48bd991.chunk.js.map",
+  "static/js/1.852c972c.chunk.js": "/react-weather/static/js/1.852c972c.chunk.js",
+  "static/js/1.852c972c.chunk.js.map": "/react-weather/static/js/1.852c972c.chunk.js.map",
+  "runtime~main.js": "/react-weather/static/js/runtime~main.8ad3cef1.js",
+  "runtime~main.js.map": "/react-weather/static/js/runtime~main.8ad3cef1.js.map",
+  "static/media/header_bg.jpg": "/react-weather/static/media/header_bg.e8d1f913.jpg",
+  "static/media/status_sunny.dcea1ca7.svg": "/react-weather/static/media/status_sunny.dcea1ca7.svg",
+  "static/media/status_most_clouds.adf0fc51.svg": "/react-weather/static/media/status_most_clouds.adf0fc51.svg",
+  "static/media/status_rain.14d54e24.svg": "/react-weather/static/media/status_rain.14d54e24.svg",
+  "static/media/status_snow.dd4939e9.svg": "/react-weather/static/media/status_snow.dd4939e9.svg",
+  "static/media/status_storm.4146cdf0.svg": "/react-weather/static/media/status_storm.4146cdf0.svg",
+  "static/media/status_fog.8a9ae1ba.svg": "/react-weather/static/media/status_fog.8a9ae1ba.svg",
+  "static/media/arrow.8932d390.svg": "/react-weather/static/media/arrow.8932d390.svg",
+  "static/media/status_clouds.ffb6fb3d.svg": "/react-weather/static/media/status_clouds.ffb6fb3d.svg",
+  "static/css/main.682cf85d.chunk.css.map": "/react-weather/static/css/main.682cf85d.chunk.css.map",
+  "index.html": "/react-weather/index.html",
+  "precache-manifest.0aa5a30d9a61e6d7eb7aef6ddf7b6098.js": "/react-weather/precache-manifest.0aa5a30d9a61e6d7eb7aef6ddf7b6098.js",
+  "service-worker.js": "/react-weather/service-worker.js"
+}
