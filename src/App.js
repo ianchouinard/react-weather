@@ -9,7 +9,7 @@ import './App.scss';
 class App extends Component {
   state = {
     currentConditions: {},
-    forecast: [],
+    futureConditions: [],
     currentConditionsLoaded: false,
     isLoadingConditions: false
   }
@@ -42,7 +42,7 @@ class App extends Component {
 
     Axios.get(ForecastUrl(zipCode))
       .then(res => {
-        this.setState({ forecast: res.data.list });
+        this.setState({ futureConditions: res.data.list });
       })
       .catch(error => {
         alert('There was a problem getting the future forecast. Please try again in a few minutes.');
@@ -57,7 +57,7 @@ class App extends Component {
         <ContentWrapper
           currentConditionsLoaded={this.state.currentConditionsLoaded}
           currentConditions={this.state.currentConditions}
-          forecast={this.state.forecast}
+          futureConditions={this.state.futureConditions}
           isLoadingConditions={this.state.isLoadingConditions} />
       </div>
     );

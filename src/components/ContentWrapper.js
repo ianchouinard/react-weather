@@ -14,7 +14,7 @@ export class ContentWrapper extends Component {
       return (
         <div id="content" role="main">
           <CurrentConditions currentConditions={this.props.currentConditions} />
-          <ForecastScrollContainer conditions={this.props.forecast} />
+          <ForecastScrollContainer conditions={this.props.futureConditions} />
           <div className="loader" style={{ display:  this.showLoadingBar() }}></div>
         </div>
       )
