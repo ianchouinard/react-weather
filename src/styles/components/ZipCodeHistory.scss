@@ -1,0 +1,58 @@
+
+.zipCodeHistory {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 5px;
+  height: 38px;
+  overflow-y: hidden;
+  z-index: 2;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+
+  span {
+    margin-right: 10px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    white-space: nowrap;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: nowrap;
+    vertical-align: middle;
+    margin: 0;
+    padding-left: 10px;
+    min-height: 58px;
+    overflow-x: auto;
+    list-style: none;
+
+    li {
+      margin-right: 7px;
+
+      a {
+        display: inline-block;
+        padding: 5px 10px;
+        font-size: .9rem;
+        color: #fff;
+        border-radius: 3px;
+
+        &:hover {
+          background: rgba(250,250,250,.15);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    display: block;
+    padding: 5px 10px;
+    height: 68px;
+    border-bottom: none;
+
+    ul {
+      padding-left: 0;
+    }
+  }
+}

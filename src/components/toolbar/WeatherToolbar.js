@@ -1,11 +1,18 @@
 import React, {Component} from 'react'
-import background from './../img/header_bg.jpg'
+import { ZipCodeHistory } from './ZipCodeHistory'
+import background from './../../img/header_bg.jpg'
 
 export class WeatherToolbar extends Component {
 
   state = {
     zipCode: '03063',
     zipLooksValid: true
+  }
+
+  componentWillReceiveProps(props) {
+    this.setState({
+      zipCode: props.zipCode
+    })
   }
 
   /**
@@ -41,6 +48,10 @@ export class WeatherToolbar extends Component {
     return(
       <section className="weatherToolbar" style={{backgroundImage: `url(${background})`}}>
         <div className="container">
+          <ZipCodeHistory
+            zipCodeHistory={this.props.zipCodeHistory}
+            zipEntered={this.props.zipEntered} />
+
           <form className="toolbar">
             <h1>Find Your Local Weather</h1>
             
