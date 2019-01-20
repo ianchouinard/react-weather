@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import { CurrentConditions } from './CurrentConditions'
-import { ForecastScrollContainer } from './ForecastScrollContainer'
+import { CurrentConditions } from './current-conditions/CurrentConditions'
+import { ForecastScrollContainer } from './future-conditions/ForecastScrollContainer'
+import { FutureConditionsChart } from './future-conditions/FutureConditionsChart';
 
 export class ContentWrapper extends Component {
 
@@ -15,6 +16,7 @@ export class ContentWrapper extends Component {
         <div id="content" role="main">
           <CurrentConditions currentConditions={this.props.currentConditions} />
           <ForecastScrollContainer conditions={this.props.futureConditions} />
+          <FutureConditionsChart futureConditions={this.props.futureConditions} />
           <div className="loader" style={{ display:  this.showLoadingBar() }}></div>
         </div>
       )

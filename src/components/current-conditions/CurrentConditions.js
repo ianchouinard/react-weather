@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { ConditionIcon } from './ConditionIcon'
+import { ConditionIcon } from './../ConditionIcon'
 
 export class CurrentConditions extends Component {
 

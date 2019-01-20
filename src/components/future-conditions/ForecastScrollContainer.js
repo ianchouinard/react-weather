@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { FutureConditions } from './FutureConditions'
-import { ReactComponent as Arrow } from './../img/arrow.svg'
+import { ReactComponent as Arrow } from './../../img/arrow.svg'
 
 export class ForecastScrollContainer extends Component {
 
@@ -59,9 +59,9 @@ export class ForecastScrollContainer extends Component {
    * View pealier forecasts by adding a positive translateX to the scrollview
    */
   slideLeft = () => {
-    const translateAmount = this.state.xAxisTransform + (100 / this.props.conditions.length )
-  
-    if (translateAmount < 0) {
+    const translateAmount = this.state.xAxisTransform + (100 / this.props.conditions.length)
+
+    if (translateAmount <= 0) {
       this.setState({xAxisTransform: translateAmount})
     }
   }

@@ -1,27 +1,15 @@
 import React, { Component } from 'react'
-import { ConditionIcon } from './ConditionIcon'
+import { ConditionIcon } from './../ConditionIcon'
+import { Transforms } from '../../classes/Transforms';
 
 export class DayConditions extends Component {
-
-  /**
-   * Creates special formatting for the forecast entry date.
-   * Formats as MM/DD HHpm/am
-   */
-  formatDate = () => {
-    // Unix timestamp from api. Need to add 1000
-    const date = new Date(this.props.currentConditions.dt * 1000)
-    const month = date.getMonth() + 1
-    const day = date.getDate()
-    const time = date.toLocaleString('en-US', { hour: 'numeric', hour12: true })
-    return `${month}.${day} ${time}`
-  }
 
   render() {
     const {currentConditions} = this.props
   
     return (
       <div className="dayConditions">
-        <div className="date">{ this.formatDate() }</div>
+        <div className="date">{ Transforms.date(this.props.currentConditions.dt) }</div>
         
         <div className="conditionStatus">
           <ConditionIcon icon={currentConditions.weather[0] ? currentConditions.weather[0].icon : ''} />
