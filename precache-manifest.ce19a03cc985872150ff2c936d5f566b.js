@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/react-weather/static/media/status_most_clouds.adf0fc51.svg"
   },
   {
-    "revision": "13f1afd9062cf45b5d5b",
+    "revision": "5e20cafa86d0a13b2546",
     "url": "/react-weather/static/css/main.a77d4ac4.chunk.css"
   },
   {
@@ -28,8 +28,8 @@ self.__precacheManifest = [
     "url": "/react-weather/static/media/status_sunny.dcea1ca7.svg"
   },
   {
-    "revision": "13f1afd9062cf45b5d5b",
-    "url": "/react-weather/static/js/main.13f1afd9.chunk.js"
+    "revision": "5e20cafa86d0a13b2546",
+    "url": "/react-weather/static/js/main.5e20cafa.chunk.js"
   },
   {
     "revision": "14d54e242ba9313158e2bf4b953def26",
@@ -52,7 +52,7 @@ self.__precacheManifest = [
     "url": "/react-weather/static/media/arrow.8932d390.svg"
   },
   {
-    "revision": "fcd46224f1221e4776fb1a2d51f6df08",
+    "revision": "ac0b56dce968343bfa0408ec507d045b",
     "url": "/react-weather/index.html"
   }
 ];
