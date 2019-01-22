@@ -7,11 +7,18 @@ export class ZipCodeHistory extends Component {
     menuOpen: false
   }
 
+  /**
+   * User selected a zip code. 
+   * Emit the zip code to the parent component
+   */
   zipSelected = (e, zip) => {
     e.preventDefault()
     this.props.zipEntered(zip)
   }
 
+  /**
+   * Toggle the mobile menu state
+   */
   toggleMenu = () => {
     const menuState = this.state.menuOpen
 

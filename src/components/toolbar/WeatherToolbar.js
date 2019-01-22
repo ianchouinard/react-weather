@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import { ZipCodeHistory } from './ZipCodeHistory'
 import background from './../../img/header_bg.jpg'
+import backgroundRain from './../../img/header_bg_rain.jpg'
+import backgroundSnow from './../../img/header_bg_snow.jpg'
 
 export class WeatherToolbar extends Component {
 
@@ -44,9 +46,31 @@ export class WeatherToolbar extends Component {
     return false
   }
 
+  /**
+   * Get header background based on weather condtions
+   * weather code info here 
+   * https://openweathermap.org/weather-conditions
+   */
+  getImageSource = () => {
+    if (!this.props.conditions || !this.props.conditions.weather) {
+      return ''
+    }
+    
+    const code = this.props.conditions.weather[0].id
+    if (code >= 700) {
+      return background // normal
+    } else if (code >= 600) {
+      return backgroundSnow // snow
+    } else if (code >= 200) {
+      return backgroundRain // rain
+    } else {
+      return background
+    }
+  }
+
   render() {
     return(
-      <section className="weatherToolbar" style={{backgroundImage: `url(${background})`}}>
+      <section className="weatherToolbar" style={{backgroundImage: `url(${this.getImageSource()})`}}>
         <div className="container">
           <ZipCodeHistory
             zipCodeHistory={this.props.zipCodeHistory}

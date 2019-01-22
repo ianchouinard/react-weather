@@ -94,7 +94,8 @@ class App extends Component {
         <WeatherToolbar 
           zipEntered={this.zipEntered}
           zipCode={this.state.zipCode}
-          zipCodeHistory={this.state.zipCodeHistory} />
+          zipCodeHistory={this.state.zipCodeHistory}
+          conditions={this.state.currentConditions} />
         <ContentWrapper
           currentConditionsLoaded={this.state.currentConditionsLoaded}
           currentConditions={this.state.currentConditions}
