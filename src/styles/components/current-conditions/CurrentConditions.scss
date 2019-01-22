@@ -38,7 +38,7 @@
     }
   }
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: $mobile_small) {
     .currentConditionsMeta {
       margin-bottom: 0;
       padding: 0 20px;
@@ -47,6 +47,11 @@
     .conditionsContent {
       display: block;
       padding: 0 20px;
+      text-align: center;
+
+      .conditions {
+        margin-left: 0;
+      }
     }
   }
 }

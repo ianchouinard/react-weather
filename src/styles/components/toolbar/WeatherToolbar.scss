@@ -47,9 +47,10 @@
     }
   }
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: $mobile_small) {
     margin-bottom: 0;
-    background-image: none;
+    padding-top: 0;
+    background-image: none !important; // override inline set from js
 
     .container {
       padding: 0;
@@ -57,7 +58,7 @@
 
     .toolbar {
       transform: translateY(0);
-      margin-top: 20px;
+      margin-top: 0;
 
       .form-group {
         input {

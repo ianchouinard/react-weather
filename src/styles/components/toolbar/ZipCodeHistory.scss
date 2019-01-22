@@ -10,6 +10,15 @@
   color: #fff;
   border-bottom: 1px solid #fff;
 
+  .menuToggle {
+    display: none;
+    margin-right: 10px;
+
+    &+span {
+      vertical-align: middle;
+    }
+  }
+
   span {
     margin-right: 10px;
     font-weight: 700;
@@ -45,14 +54,37 @@
     }
   }
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: $mobile_small) {
     display: block;
-    padding: 5px 10px;
-    height: 68px;
+    padding: 15px 0 5px 0;
+    height: auto;
     border-bottom: none;
+    background: $color_grey;
+
+    .menuToggle {
+      display: inline-block;
+      margin-left: 15px;
+    }
 
     ul {
-      padding-left: 0;
+      max-height: 0;
+      min-height: 0;
+      overflow: hidden;
+      padding: 0 15px;
+      margin-top: 10px;
+      display: block;
+      transition: all 350ms;
+
+      &.mobileOpen {
+        max-height: 200px;
+        overflow-y: auto;
+      }
+
+      li {
+        display: block;
+        width: 100%;
+        margin: 0;
+      }
     }
   }
 }
