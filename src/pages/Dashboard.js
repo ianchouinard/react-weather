@@ -4,6 +4,7 @@ import { WeatherToolbar } from './../components/dashboard/toolbar/WeatherToolbar
 import { CurrentConditionsUrl, ForecastUrl } from './../Constants'
 import { ContentWrapper } from './../components/dashboard/ContentWrapper'
 import Axios from 'axios'
+import { removeZipHistory } from '../actions/ForecastActions';
 
 export class Dashboard extends Component {
   state = {
@@ -61,6 +62,7 @@ export class Dashboard extends Component {
         }
 
         this.setState({isLoadingConditions: false})
+        store.dispatch(removeZipHistory(zipCode))
       });
 
     Axios.get(ForecastUrl(zipCode, unitType))

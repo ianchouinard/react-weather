@@ -35,6 +35,20 @@ export const ForecastMetaReducer = (state = initialState, action) => {
     }
   }
 
+  if(action.type === 'REMOVE_ZIP_HISTORY') {
+    let newHistory = [...state.zipCodeHistory]
+    const itemIndex = newHistory.indexOf(action.payload)
+    if (itemIndex !== -1) {
+      newHistory.splice(itemIndex, 1)
+    }
+
+    localStorage.setItem('zip_history', JSON.stringify(newHistory))
+    return Object.assign({}, state, {
+      zipCodeHistory: newHistory,
+      zipCode: newHistory[0]
+    })
+  }
+
   if (action.type === 'SET_ZIP_HISTORY') {
     return Object.assign({}, state, {
       zipCodeHistory: action.payload,
