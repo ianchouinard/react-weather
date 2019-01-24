@@ -1,9 +1,10 @@
 const initialState = {
   zipCodeHistory: [],
-  zipCode: 0
+  zipCode: 0,
+  unitType: 'imperial'
 }
 
-export const ZipCodeReducer = (state = initialState, action) => {
+export const ForecastMetaReducer = (state = initialState, action) => {
 
   if (action.type === 'SET_ZIP') {
     let updatedHistory = []
@@ -38,6 +39,13 @@ export const ZipCodeReducer = (state = initialState, action) => {
     return Object.assign({}, state, {
       zipCodeHistory: action.payload,
       zipCode: action.payload[0]
+    })
+  }
+
+  if (action.type === 'SET_UNIT_TYPE') {
+    localStorage.setItem('unit_type', action.payload)
+    return Object.assign({}, state, {
+      unitType: action.payload
     })
   }
 

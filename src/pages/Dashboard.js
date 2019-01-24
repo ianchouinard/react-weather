@@ -16,22 +16,26 @@ export class Dashboard extends Component {
   }
 
   componentWillMount() {
-    this.zipEntered(store.getState().zipCode)
+    this.zipEntered()
   }
 
   componentDidMount() {
     store.subscribe(() => {
-      this.zipEntered(store.getState().zipCode)
+      this.zipEntered()
     })
   }
 
-  zipEntered = (zipCode) => {
+  zipEntered = () => {
+    const state = store.getState()
+    const zipCode = state.zipCode
+    const unitType = state.unitType
+
     this.setState({
       isLoadingConditions: true,
       zipCode: zipCode
     })
 
-    Axios.get(CurrentConditionsUrl(zipCode))
+    Axios.get(CurrentConditionsUrl(zipCode, unitType))
       .then(res => {
         this.setState({
           currentConditionsLoaded: true,
@@ -50,7 +54,7 @@ export class Dashboard extends Component {
         this.setState({isLoadingConditions: false})
       });
 
-    Axios.get(ForecastUrl(zipCode))
+    Axios.get(ForecastUrl(zipCode, unitType))
       .then(res => {
         this.setState({ futureConditions: res.data.list })
       })

@@ -13,6 +13,14 @@
   }
 }
 
+.page {
+  padding-top: 40px;
+
+  section {
+    margin: 20px 0;
+  }
+}
+
 button[type="submit"] {
   padding: 5px 10px;
   background: $color_accent;

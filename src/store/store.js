@@ -1,4 +1,4 @@
 import { createStore } from 'redux'
-import { ZipCodeReducer } from './../reducers/ZipCodeReducer'
+import { ForecastMetaReducer } from './../reducers/ForecastMetaReducer'
 
-export const store = createStore(ZipCodeReducer)
+export const store = createStore(ForecastMetaReducer)

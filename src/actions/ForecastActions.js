@@ -10,3 +10,7 @@ export const addZipHistory = (payload) => {
 export const setZipHistory = (payload) => {
   return {type: 'SET_ZIP_HISTORY', payload}
 }
+
+export const setUnitType = (payload) => {
+  return {type: 'SET_UNIT_TYPE', payload}
+}

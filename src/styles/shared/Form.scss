@@ -1,0 +1,41 @@
+$focus_outline: 1px dotted #B7B7B7;
+
+.appRadio {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 20px;
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  input[type="radio"] + label {
+    &:before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 5px;
+      width: 20px;
+      height: 20px;
+      background: $color_accent_dull;
+      border-radius: 100%;
+      cursor: pointer;
+    }
+
+    &:hover {
+      &:before {
+        outline: $focus_outline;
+      }
+    }
+  }
+
+  input[type="radio"]:checked + label {
+    &:before {
+      width: 20px;
+      height: 20px;
+      border: 3px solid $color_accent_dull;
+      background: $color_accent;
+    }
+  }
+
+}

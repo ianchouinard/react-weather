@@ -1,5 +1,5 @@
 import { store } from './../store/store'
-import { setZipHistory, setZipCode } from './../actions/ForecastActions'
+import { setZipHistory, setZipCode, setUnitType } from './../actions/ForecastActions'
 
 export class Setup {
 
@@ -12,6 +12,14 @@ export class Setup {
     } else {
       // Using Nashua NH as a defult
       store.dispatch(setZipCode(['03063']))
+    }
+  }
+
+  static setupUnitType() {
+    const unitType = localStorage.getItem('unit_type')
+
+    if (unitType && (unitType === 'imperial' || unitType === 'metric')) {
+      store.dispatch(setUnitType(unitType))
     }
   }
 
