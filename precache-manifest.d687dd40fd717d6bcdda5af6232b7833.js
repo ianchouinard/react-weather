@@ -1,19 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "dcea1ca75274cee058e352c030549c3c",
-    "url": "/react-weather/static/media/status_sunny.dcea1ca7.svg"
+    "revision": "ffb6fb3dbf9106e05ad903db3fd52466",
+    "url": "/react-weather/static/media/status_clouds.ffb6fb3d.svg"
   },
   {
-    "revision": "0911e63ae9d7b4349637",
-    "url": "/react-weather/static/css/main.36f5abd4.chunk.css"
+    "revision": "54dfded704d2fa3db714",
+    "url": "/react-weather/static/css/main.6af9dcb9.chunk.css"
   },
   {
-    "revision": "c07ad4779d2789a9a635",
-    "url": "/react-weather/static/js/1.c07ad477.chunk.js"
+    "revision": "0fb0ebee7d9aa4dd3f7f",
+    "url": "/react-weather/static/js/1.0fb0ebee.chunk.js"
   },
   {
-    "revision": "8ad3cef1c2506df250b9",
-    "url": "/react-weather/static/js/runtime~main.8ad3cef1.js"
+    "revision": "0de9fbb892e9e8c63c73",
+    "url": "/react-weather/static/js/2.0de9fbb8.chunk.js"
+  },
+  {
+    "revision": "54776b51ca6fcd4d7212",
+    "url": "/react-weather/static/js/runtime~main.54776b51.js"
   },
   {
     "revision": "d1f6a5f755becea8f22b2bfa57c8d856",
@@ -28,12 +32,12 @@ self.__precacheManifest = [
     "url": "/react-weather/static/media/header_bg_snow.468404b7.jpg"
   },
   {
-    "revision": "ffb6fb3dbf9106e05ad903db3fd52466",
-    "url": "/react-weather/static/media/status_clouds.ffb6fb3d.svg"
+    "revision": "54dfded704d2fa3db714",
+    "url": "/react-weather/static/js/main.54dfded7.chunk.js"
   },
   {
-    "revision": "0911e63ae9d7b4349637",
-    "url": "/react-weather/static/js/main.0911e63a.chunk.js"
+    "revision": "dcea1ca75274cee058e352c030549c3c",
+    "url": "/react-weather/static/media/status_sunny.dcea1ca7.svg"
   },
   {
     "revision": "adf0fc5148e103d7da7024b776264afd",
@@ -60,7 +64,7 @@ self.__precacheManifest = [
     "url": "/react-weather/static/media/arrow.8932d390.svg"
   },
   {
-    "revision": "e2848ebef4e1e474c6b3ff48b2494af5",
+    "revision": "e716ad624bab3af29af0c6b88691aebb",
     "url": "/react-weather/index.html"
   }
 ];
