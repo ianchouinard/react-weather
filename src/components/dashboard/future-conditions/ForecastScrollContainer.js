@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { FutureConditions } from './FutureConditions'
 import { ReactComponent as Arrow } from './../../../img/arrow.svg'
+import PropTypes from 'prop-types'
 
 export class ForecastScrollContainer extends Component {
 
@@ -82,4 +83,8 @@ export class ForecastScrollContainer extends Component {
     )
   }
 
+}
+
+ForecastScrollContainer.propTypes = {
+  conditions: PropTypes.array.isRequired
 }

@@ -1,18 +1,16 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export class MenuToggle extends Component {
+export const MenuToggle = (props) => {
 
-  render() {
-    return (
-      <button
-        className={'menuToggle ' + (this.props.open ? 'open' : '')}
-        onClick={this.props.toggleClick.bind(this)}
-        title={(this.props.open ? 'Close Menu' : 'Open Menu')}>
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    )
-  }
+  return (
+    <button
+      className={'menuToggle ' + (props.open ? 'open' : '')}
+      onClick={props.toggleClick}
+      title={(props.open ? 'Close Menu' : 'Open Menu')}>
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  )
 
 }

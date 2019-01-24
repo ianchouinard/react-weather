@@ -1,5 +1,6 @@
 import React from 'react'
 import { store } from './../../store/store'
+import PropTypes from 'prop-types'
 
 export const Conditions = (props) => {
   const {conditions} = props
@@ -18,4 +19,16 @@ export const Conditions = (props) => {
       <h4>{conditions.wind.speed} <sup>{speedUnit}</sup></h4>
     </div>
   )
+}
+
+Conditions.propTypes = {
+  conditions: PropTypes.shape({
+    weather: PropTypes.array.isRequired,
+    main: PropTypes.shape({
+      temp: PropTypes.number.isRequired
+    }),
+    wind: PropTypes.shape({
+      speed: PropTypes.number.isRequired
+    })
+  })
 }

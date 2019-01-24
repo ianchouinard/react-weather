@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { DayConditions } from './DayConditions'
+import PropTypes from 'prop-types'
 
 export class FutureConditions extends Component {
 
@@ -18,4 +19,8 @@ export class FutureConditions extends Component {
     ))
   }
 
+}
+
+FutureConditions.propTypes = {
+  conditions: PropTypes.array.isRequired
 }

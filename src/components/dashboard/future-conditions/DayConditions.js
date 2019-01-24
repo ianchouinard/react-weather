@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { ConditionIcon } from './../../ConditionIcon'
 import { Transforms } from '../../../classes/Transforms'
-import { Conditions } from '../Conditions';
+import { Conditions } from '../Conditions'
+import PropTypes from 'prop-types'
 
 export class DayConditions extends Component {
 
@@ -21,4 +22,11 @@ export class DayConditions extends Component {
     )
   }
 
+}
+
+DayConditions.propTypes = {
+  currentConditions: PropTypes.shape({
+    dt: PropTypes.date,
+    weather: PropTypes.array.isRequired
+  })
 }

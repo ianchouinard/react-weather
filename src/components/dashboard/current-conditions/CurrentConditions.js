@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { ConditionIcon } from './../../ConditionIcon'
-import { Conditions } from '../Conditions';
+import { Conditions } from '../Conditions'
+import PropTypes from 'prop-types'
 
 export class CurrentConditions extends Component {
 
@@ -21,4 +22,11 @@ export class CurrentConditions extends Component {
     )
   }
 
-} 
+}
+
+CurrentConditions.propTypes = {
+  currentConditions: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    weather: PropTypes.array.isRequired
+  })
+}

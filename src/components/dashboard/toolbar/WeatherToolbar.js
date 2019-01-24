@@ -5,6 +5,7 @@ import { setZipCode } from './../../../actions/ForecastActions'
 import background from './../../../img/header_bg.jpg'
 import backgroundRain from './../../../img/header_bg_rain.jpg'
 import backgroundSnow from './../../../img/header_bg_snow.jpg'
+import PropTypes from 'prop-types'
 
 export class WeatherToolbar extends Component {
 
@@ -99,3 +100,9 @@ export class WeatherToolbar extends Component {
   }
 
 }
+
+WeatherToolbar.propTypes = {
+  zipCode: PropTypes.string.isRequired,
+  conditions: PropTypes.object.isRequired
+}
+

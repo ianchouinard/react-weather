@@ -77,9 +77,7 @@ export class Dashboard extends Component {
     return (
       <div className="dashboard">
         <WeatherToolbar
-          zipEntered={this.zipEntered}
           zipCode={this.state.zipCode}
-          zipCodeHistory={this.state.zipCodeHistory}
           conditions={this.state.currentConditions} />
         <ContentWrapper
           currentConditionsLoaded={this.state.currentConditionsLoaded}

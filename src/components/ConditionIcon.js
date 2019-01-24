@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { ReactComponent as StatusClouds } from './../img/status_clouds.svg'
 import { ReactComponent as StatusSunny } from './../img/status_sunny.svg'
 import { ReactComponent as StatusMostClouds } from './../img/status_most_clouds.svg'
@@ -7,11 +7,8 @@ import { ReactComponent as StatusSnow } from './../img/status_snow.svg'
 import { ReactComponent as StatusStorm } from './../img/status_storm.svg'
 import { ReactComponent as StatusFog } from './../img/status_fog.svg'
 
-export class ConditionIcon extends Component {
-
-  render() {
-    const { icon } = this.props
-
+export const ConditionIcon = (props) => {
+    const { icon } = props
     // condition codes https://openweathermap.org/weather-conditions
     const cloudIcons = ['03d', '03n', '04d', '04n']
     const sunnyIcons = ['01d', '01n']
@@ -66,6 +63,4 @@ export class ConditionIcon extends Component {
     return (
       <StatusSunny />
     )
-  }
-
 }

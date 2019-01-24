@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Line } from 'react-chartjs-2';
-import { Transforms } from '../../../classes/Transforms';
+import { Transforms } from '../../../classes/Transforms'
 import { store } from './../../../store/store'
+import PropTypes from 'prop-types'
 
 export class FutureConditionsChart extends Component {
 
@@ -52,4 +53,8 @@ export class FutureConditionsChart extends Component {
     )
   }
 
+}
+
+FutureConditionsChart.propTypes = {
+  futureConditions: PropTypes.array.isRequired
 }
