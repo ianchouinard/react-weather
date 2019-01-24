@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Line } from 'react-chartjs-2';
 import { Transforms } from '../../classes/Transforms';
+import { store } from './../../store/store'
 
 export class FutureConditionsChart extends Component {
 
@@ -17,12 +18,15 @@ export class FutureConditionsChart extends Component {
       temps.push(conditon.main.temp)
     })
 
+    const unit = store.getState().unitType
+    const tempUnit = (unit === 'metric') ? 'c' : 'f'
+
     return {
       labels: dates,
       datasets: [
         {
           data: temps,
-          label: 'Temp (f)',
+          label: `Temp (${tempUnit})`,
           borderColor: "#3FBF7F",
           fill: true,
           backgroundColor: "rgba(38, 124, 81, 0.05)"
