@@ -1,15 +1,12 @@
 import React, { Component } from 'react'
 import { ConditionIcon } from './../../ConditionIcon'
 import { Transforms } from '../../../classes/Transforms'
-import { store } from './../../../store/store'
+import { Conditions } from '../Conditions';
 
 export class DayConditions extends Component {
 
   render() {
     const {currentConditions} = this.props
-    const unit = store.getState().unitType
-    const tempUnit = (unit === 'metric') ? 'c' : 'f'
-    const speedUnit = (unit === 'metric') ? 'kph' : 'mph'
   
     return (
       <div className="dayConditions">
@@ -19,15 +16,7 @@ export class DayConditions extends Component {
           <ConditionIcon icon={currentConditions.weather[0] ? currentConditions.weather[0].icon : ''} />
         </div>
 
-        <div className="conditions">
-          <h3>{ currentConditions.weather[0] ? currentConditions.weather[0].main : 'N/A' }</h3>
-
-          <p>Current Temp</p>
-          <h3>{ Math.round(currentConditions.main.temp) } <sup>&deg; { tempUnit }</sup></h3>
-
-          <p>Wind Speed</p>
-          <h4>{ currentConditions.wind.speed } <sup>{ speedUnit }</sup></h4>
-        </div>
+        <Conditions conditions={currentConditions} />
       </div>
     )
   }
