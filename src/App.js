@@ -30,7 +30,7 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <Router>
+        <Router basename="/react-weather">
           <div className="App">
             <Header />
             <div id="content" role="main">
