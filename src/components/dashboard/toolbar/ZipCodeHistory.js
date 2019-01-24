@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { MenuToggle } from '../MenuToggle'
-import { store } from '../../store/store';
-import { setZipCode } from '../../actions/ForecastActions';
+import { MenuToggle } from '../../MenuToggle'
+import { store } from '../../../store/store';
+import { setZipCode } from '../../../actions/ForecastActions';
 
 export class ZipCodeHistory extends Component {
 

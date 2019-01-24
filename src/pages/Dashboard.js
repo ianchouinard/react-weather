@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { store } from './../store/store'
-import { WeatherToolbar } from './../components/toolbar/WeatherToolbar'
+import { WeatherToolbar } from './../components/dashboard/toolbar/WeatherToolbar'
 import { CurrentConditionsUrl, ForecastUrl } from './../Constants'
-import { ContentWrapper } from './../components/ContentWrapper'
+import { ContentWrapper } from './../components/dashboard/ContentWrapper'
 import Axios from 'axios'
 
 export class Dashboard extends Component {

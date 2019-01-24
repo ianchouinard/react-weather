@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { ConditionIcon } from './../ConditionIcon'
-import { store } from './../../store/store'
+import { ConditionIcon } from './../../ConditionIcon'
+import { store } from './../../../store/store'
 
 export class CurrentConditions extends Component {
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Line } from 'react-chartjs-2';
-import { Transforms } from '../../classes/Transforms';
-import { store } from './../../store/store'
+import { Transforms } from '../../../classes/Transforms';
+import { store } from './../../../store/store'
 
 export class FutureConditionsChart extends Component {
 

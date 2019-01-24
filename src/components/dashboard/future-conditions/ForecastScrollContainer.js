@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { FutureConditions } from './FutureConditions'
-import { ReactComponent as Arrow } from './../../img/arrow.svg'
+import { ReactComponent as Arrow } from './../../../img/arrow.svg'
 
 export class ForecastScrollContainer extends Component {
 

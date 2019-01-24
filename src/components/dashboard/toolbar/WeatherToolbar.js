@@ -1,10 +1,10 @@
 import React, {Component} from 'react'
 import { ZipCodeHistory } from './ZipCodeHistory'
-import { store } from './../../store/store'
-import { setZipCode } from './../../actions/ForecastActions'
-import background from './../../img/header_bg.jpg'
-import backgroundRain from './../../img/header_bg_rain.jpg'
-import backgroundSnow from './../../img/header_bg_snow.jpg'
+import { store } from './../../../store/store'
+import { setZipCode } from './../../../actions/ForecastActions'
+import background from './../../../img/header_bg.jpg'
+import backgroundRain from './../../../img/header_bg_rain.jpg'
+import backgroundSnow from './../../../img/header_bg_snow.jpg'
 
 export class WeatherToolbar extends Component {
 

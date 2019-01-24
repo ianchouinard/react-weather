@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { ConditionIcon } from './../ConditionIcon'
-import { Transforms } from '../../classes/Transforms'
-import { store } from './../../store/store'
+import { ConditionIcon } from './../../ConditionIcon'
+import { Transforms } from '../../../classes/Transforms'
+import { store } from './../../../store/store'
 
 export class DayConditions extends Component {
 
