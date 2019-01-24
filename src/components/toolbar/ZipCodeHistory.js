@@ -1,10 +1,21 @@
 import React, { Component } from 'react'
 import { MenuToggle } from '../MenuToggle'
+import { store } from '../../store/store';
+import { setZipCode } from '../../actions/ForecastActions';
 
 export class ZipCodeHistory extends Component {
 
   state = {
-    menuOpen: false
+    menuOpen: false,
+    zipCodeHistory: store.getState().zipCodeHistory
+  }
+
+  componentDidMount() {
+    store.subscribe(() => {
+      this.setState({
+        zipCodeHistory: store.getState().zipCodeHistory
+      })
+    })
   }
 
   /**
@@ -13,7 +24,7 @@ export class ZipCodeHistory extends Component {
    */
   zipSelected = (e, zip) => {
     e.preventDefault()
-    this.props.zipEntered(zip)
+    store.dispatch(setZipCode(zip))
   }
 
   /**
@@ -33,7 +44,7 @@ export class ZipCodeHistory extends Component {
         <MenuToggle open={this.state.menuOpen} toggleClick={this.toggleMenu} />
         <span>Recent Locations</span>
         <ul className={(this.state.menuOpen ? 'mobileOpen' : '')}>
-          {this.props.zipCodeHistory.map((zipCode, index) => {
+          {this.state.zipCodeHistory.map((zipCode, index) => {
             return (
               <li key={ index }>
                 <a

@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 import { ZipCodeHistory } from './ZipCodeHistory'
+import { store } from './../../store/store'
+import { setZipCode } from './../../actions/ForecastActions'
 import background from './../../img/header_bg.jpg'
 import backgroundRain from './../../img/header_bg_rain.jpg'
 import backgroundSnow from './../../img/header_bg_snow.jpg'
@@ -27,7 +29,7 @@ export class WeatherToolbar extends Component {
    */
   zipEntered = (e) => {
     e.preventDefault()
-    this.props.zipEntered(this.state.zipCode)
+    store.dispatch(setZipCode(this.state.zipCode))
   }
 
   /**
@@ -72,9 +74,7 @@ export class WeatherToolbar extends Component {
     return(
       <section className="weatherToolbar" style={{backgroundImage: `url(${this.getImageSource()})`}}>
         <div className="container">
-          <ZipCodeHistory
-            zipCodeHistory={this.props.zipCodeHistory}
-            zipEntered={this.props.zipEntered} />
+          <ZipCodeHistory />
 
           <form className="toolbar">
             <h1>Find Your Local Weather</h1>
