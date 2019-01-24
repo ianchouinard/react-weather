@@ -13,7 +13,7 @@ export class ContentWrapper extends Component {
   render() {
     if (this.props.currentConditionsLoaded) {
       return (
-        <div id="content" role="main">
+        <div className="dashboardContent">
           <CurrentConditions currentConditions={this.props.currentConditions} />
           <ForecastScrollContainer conditions={this.props.futureConditions} />
           <FutureConditionsChart futureConditions={this.props.futureConditions} />

@@ -31,10 +31,12 @@ class App extends Component {
     return (
       <Provider store={store}>
         <Router>
-          <div className="App" role="main">
+          <div className="App">
             <Header />
-            <Route path="/" exact component={Dashboard} />
-            <Route path="/settings" component={settingsPage} />
+            <div id="content" role="main">
+              <Route path="/" exact component={Dashboard} />
+              <Route path="/settings" component={settingsPage} />
+            </div>
           </div>
         </Router>
       </Provider>

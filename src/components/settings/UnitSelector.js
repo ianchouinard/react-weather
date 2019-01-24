@@ -9,12 +9,21 @@ export class UnitSelector extends Component {
     isMetric: false
   }
 
+  constructor() {
+    super()
+    this.storeSubscription = null
+  }
+
   componentWillMount() {
     this.getUnitSelection()
   
-    store.subscribe(() => {
+    this.storeSubscription = store.subscribe(() => {
       this.getUnitSelection()
     })
+  }
+
+  componentWillUnmount() {
+    this.storeSubscription()
   }
 
   getUnitSelection() {

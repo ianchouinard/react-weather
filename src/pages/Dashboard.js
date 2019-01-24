@@ -15,14 +15,23 @@ export class Dashboard extends Component {
     isLoadingConditions: false
   }
 
+  constructor() {
+    super()
+    this.storeSubscription = null
+  }
+
   componentWillMount() {
     this.zipEntered()
   }
 
   componentDidMount() {
-    store.subscribe(() => {
+    this.storeSubscription =store.subscribe(() => {
       this.zipEntered()
     })
+  }
+
+  componentWillUnmount() {
+    this.storeSubscription()
   }
 
   zipEntered = () => {

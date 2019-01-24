@@ -5,7 +5,7 @@ export default function Settings() {
   return (
     <div className="page">
       <div className="container">
-        <h1>Settings</h1>
+        <h2>Settings</h2>
         <section>
           <UnitSelector />
         </section>

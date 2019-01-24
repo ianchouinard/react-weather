@@ -2,6 +2,7 @@
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 10px 20px;
   margin: 0;
   background: $color_black;
@@ -11,5 +12,24 @@ header {
     font-size: 1.15rem;
     margin: 0;
     padding: 0;
+  }
+
+  a {
+    display: inline-block;
+    padding: 5px 10px;
+    color: #fff;
+    margin: 0 5px;
+    font-size: .95rem;
+    border-radius: 3px;
+
+    &:hover {
+      background: #444;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    &:visited {
+      color: #fff;
+    }
   }
 }
