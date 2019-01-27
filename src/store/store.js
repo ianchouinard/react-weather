@@ -1,4 +1,8 @@
-import { createStore } from 'redux'
+import { createStore, combineReducers } from 'redux'
 import { ForecastMetaReducer } from './../reducers/ForecastMetaReducer'
 
-export const store = createStore(ForecastMetaReducer)
+const rootReducer = combineReducers({
+  meta: ForecastMetaReducer
+})
+
+export const store = createStore(rootReducer)

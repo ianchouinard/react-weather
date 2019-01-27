@@ -36,7 +36,7 @@ export class Dashboard extends Component {
   }
 
   zipEntered = () => {
-    const state = store.getState()
+    const state = store.getState().meta
     const zipCode = state.zipCode
     const unitType = state.unitType
 

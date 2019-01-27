@@ -27,7 +27,7 @@ export class UnitSelector extends Component {
   }
 
   getUnitSelection() {
-    const unit = store.getState().unitType
+    const unit = store.getState().meta.unitType
     if (unit === 'metric') {
       this.setState((state, props) => {
         return {

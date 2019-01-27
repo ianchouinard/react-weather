@@ -19,7 +19,7 @@ export class FutureConditionsChart extends Component {
       temps.push(conditon.main.temp)
     })
 
-    const unit = store.getState().unitType
+    const unit = store.getState().meta.unitType
     const tempUnit = (unit === 'metric') ? 'c' : 'f'
 
     return {

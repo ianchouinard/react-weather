@@ -7,13 +7,13 @@ export class ZipCodeHistory extends Component {
 
   state = {
     menuOpen: false,
-    zipCodeHistory: store.getState().zipCodeHistory
+    zipCodeHistory: store.getState().meta.zipCodeHistory
   }
 
   componentDidMount() {
     store.subscribe(() => {
       this.setState({
-        zipCodeHistory: store.getState().zipCodeHistory
+        zipCodeHistory: store.getState().meta.zipCodeHistory
       })
     })
   }

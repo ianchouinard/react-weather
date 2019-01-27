@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 export const Conditions = (props) => {
   const {conditions} = props
-  const unit = store.getState().unitType
+  const unit = store.getState().meta.unitType
   const tempUnit = (unit === 'metric') ? 'C' : 'F'
   const speedUnit = (unit === 'metric') ? 'kph' : 'mph'
 
