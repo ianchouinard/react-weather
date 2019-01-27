@@ -1,11 +1,15 @@
-import React, { Component, Suspense } from 'react'
+import React, { Component } from 'react'
 import { Provider } from 'react-redux'
 import { store } from './store/store'
 import { Setup } from './classes/Setup'
 import { Header } from './layout/Header'
 import { Dashboard } from './pages/Dashboard'
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Settings } from './pages/Settings'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './App.scss'
+/*
+Lazy load settings. 
+COmmented out for now as github pages doesn't support this
 const Settings = React.lazy(() => import('./pages/Settings'))
 
 const settingsPage = () => {
@@ -15,7 +19,7 @@ const settingsPage = () => {
     </Suspense>
   )
 }
-
+*/
 class App extends Component {
 
   componentWillMount() {
@@ -35,7 +39,7 @@ class App extends Component {
             <Header />
             <div id="content" role="main">
               <Route path="/" exact component={Dashboard} />
-              <Route path="/settings" component={settingsPage} />
+              <Route path="/settings" component={Settings} />
             </div>
           </div>
         </Router>

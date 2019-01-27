@@ -26,7 +26,7 @@ export class Dashboard extends Component {
   }
 
   componentDidMount() {
-    this.storeSubscription =store.subscribe(() => {
+    this.storeSubscription = store.subscribe(() => {
       this.zipEntered()
     })
   }

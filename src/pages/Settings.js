@@ -1,7 +1,8 @@
 import React from 'react'
 import { UnitSelector } from '../components/settings/UnitSelector';
+import { ManagezipCodes } from '../components/settings/ManageZipCodes';
 
-export default function Settings() {
+export const Settings = () => {
   return (
     <div className="page">
       <div className="container">
@@ -10,6 +11,9 @@ export default function Settings() {
           <UnitSelector />
         </section>
         <hr />
+        <section>
+          <ManagezipCodes />
+        </section>
       </div>
     </div>
   )

@@ -50,6 +50,7 @@ export const ForecastMetaReducer = (state = initialState, action) => {
   }
 
   if (action.type === 'SET_ZIP_HISTORY') {
+    localStorage.setItem('zip_history', JSON.stringify(action.payload))
     return Object.assign({}, state, {
       zipCodeHistory: action.payload,
       zipCode: action.payload[0]

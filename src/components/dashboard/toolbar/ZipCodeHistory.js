@@ -10,12 +10,23 @@ export class ZipCodeHistory extends Component {
     zipCodeHistory: store.getState().meta.zipCodeHistory
   }
 
+  constructor() {
+    super()
+    this.storeSubscription = null
+  }
+
   componentDidMount() {
-    store.subscribe(() => {
+    this.storeSubscription = store.subscribe(() => {
       this.setState({
         zipCodeHistory: store.getState().meta.zipCodeHistory
       })
     })
+  }
+
+  componentWillUnmount() {
+    if (this.storeSubscription) {
+      this.storeSubscription()
+    }
   }
 
   /**
