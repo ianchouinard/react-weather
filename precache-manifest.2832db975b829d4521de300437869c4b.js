@@ -1,27 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "ffb6fb3dbf9106e05ad903db3fd52466",
-    "url": "/react-weather/static/media/status_clouds.ffb6fb3d.svg"
+    "revision": "dcea1ca75274cee058e352c030549c3c",
+    "url": "/react-weather/static/media/status_sunny.dcea1ca7.svg"
   },
   {
-    "revision": "25177b953696fd36ff5f",
-    "url": "/react-weather/static/css/main.1e806863.chunk.css"
+    "revision": "be2f91030b6b155882e9",
+    "url": "/react-weather/static/css/main.f5ddcf65.chunk.css"
   },
   {
-    "revision": "de6f3ef68c0b2271723f",
-    "url": "/react-weather/static/js/1.de6f3ef6.chunk.js"
+    "revision": "d595c70126497f59c3ec",
+    "url": "/react-weather/static/js/1.d595c701.chunk.js"
   },
   {
-    "revision": "37b90a969e0dc34b74a1",
-    "url": "/react-weather/static/js/2.37b90a96.chunk.js"
-  },
-  {
-    "revision": "e749e71372b6b139fc6b",
-    "url": "/react-weather/static/js/3.e749e713.chunk.js"
-  },
-  {
-    "revision": "2ee007cad5efa0d68c02",
-    "url": "/react-weather/static/js/runtime~main.2ee007ca.js"
+    "revision": "8ad3cef1c2506df250b9",
+    "url": "/react-weather/static/js/runtime~main.8ad3cef1.js"
   },
   {
     "revision": "d1f6a5f755becea8f22b2bfa57c8d856",
@@ -36,12 +28,12 @@ self.__precacheManifest = [
     "url": "/react-weather/static/media/header_bg_snow.468404b7.jpg"
   },
   {
-    "revision": "25177b953696fd36ff5f",
-    "url": "/react-weather/static/js/main.25177b95.chunk.js"
+    "revision": "ffb6fb3dbf9106e05ad903db3fd52466",
+    "url": "/react-weather/static/media/status_clouds.ffb6fb3d.svg"
   },
   {
-    "revision": "dcea1ca75274cee058e352c030549c3c",
-    "url": "/react-weather/static/media/status_sunny.dcea1ca7.svg"
+    "revision": "be2f91030b6b155882e9",
+    "url": "/react-weather/static/js/main.be2f9103.chunk.js"
   },
   {
     "revision": "adf0fc5148e103d7da7024b776264afd",
@@ -68,7 +60,7 @@ self.__precacheManifest = [
     "url": "/react-weather/static/media/arrow.8932d390.svg"
   },
   {
-    "revision": "041d773addd2e06dfa5a0a1c7daa2b83",
+    "revision": "55da2fe2e5dd635d50980fb5c66aaa85",
     "url": "/react-weather/index.html"
   }
 ];
