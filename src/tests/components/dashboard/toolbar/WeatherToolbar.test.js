@@ -1,13 +1,11 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { WeatherToolbar } from './../../../components/toolbar/WeatherToolbar'
+import { WeatherToolbar } from './../../../../components/dashboard/toolbar/WeatherToolbar'
 
 describe('WeatherToolbar', () => {
   const component = renderer.create(
-    <WeatherToolbar 
-      zipEntered={() => {}}
+    <WeatherToolbar
       zipCode={'03063'}
-      zipCodeHistory={['03063']}
       conditions={{}} />
   )
 
@@ -43,17 +41,29 @@ describe('WeatherToolbar', () => {
     }
 
     it('should figure out an appropriate image source', () => {
-      const component = renderer.create(
-        <WeatherToolbar 
-          zipEntered={() => {}}
+      const component1 = renderer.create(
+        <WeatherToolbar
           zipCode={'03063'}
-          zipCodeHistory={['03063']}
           conditions={mockCondition(800)} />
       )
+      const test1 = component1.getInstance().getImageSource()
+      expect(test1).toBe('header_bg.jpg')
 
-      const source = component.getInstance().getImageSource()
+      const component2 = renderer.create(
+        <WeatherToolbar
+          zipCode={'03063'}
+          conditions={mockCondition(600)} />
+      )
+      const test2 = component2.getInstance().getImageSource()
+      expect(test2).toBe('header_bg_snow.jpg')
 
-      console.log(source)
+      const component3 = renderer.create(
+        <WeatherToolbar
+          zipCode={'03063'}
+          conditions={mockCondition(200)} />
+      )
+      const test3 = component3.getInstance().getImageSource()
+      expect(test3).toBe('header_bg_rain.jpg')
     })
   })
 })

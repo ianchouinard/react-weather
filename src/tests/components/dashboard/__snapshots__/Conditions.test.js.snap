@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Conditions should create the component 1`] = `
+<div
+  className="conditions"
+>
+  <h3 />
+  <p>
+    Current Temp
+  </p>
+  <h3>
+    32
+    <sup>
+      ° 
+      F
+    </sup>
+  </h3>
+  <p>
+    Wind Speed
+  </p>
+  <h4>
+    0
+     
+    <sup>
+      mph
+    </sup>
+  </h4>
+</div>
+`;

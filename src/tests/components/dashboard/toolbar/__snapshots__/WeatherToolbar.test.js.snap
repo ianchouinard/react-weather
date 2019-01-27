@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WeatherToolbar should create the component 1`] = `
+<section
+  className="weatherToolbar"
+  style={
+    Object {
+      "backgroundImage": "url()",
+    }
+  }
+>
+  <div
+    className="container"
+  >
+    <nav
+      className="zipCodeHistory"
+    >
+      <button
+        className="menuToggle "
+        onClick={[Function]}
+        title="Open Menu"
+      >
+        <span />
+        <span />
+        <span />
+      </button>
+      <span>
+        Recent Locations
+      </span>
+      <ul
+        className=""
+      />
+    </nav>
+    <form
+      className="toolbar"
+    >
+      <h1>
+        Find Your Local Weather
+      </h1>
+      <div
+        className="form-group"
+      >
+        <label>
+          Zip Code
+        </label>
+        <input
+          onChange={[Function]}
+          placeholder="zip code"
+          type="text"
+          value="03063"
+        />
+        <button
+          disabled={false}
+          onClick={[Function]}
+          title="Get forecast for this location"
+          type="submit"
+        >
+          Get Weather
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+`;

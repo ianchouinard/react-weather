@@ -33,8 +33,10 @@ export class ZipCodeHistory extends Component {
   toggleMenu = () => {
     const menuState = this.state.menuOpen
 
-    this.setState({
-      menuOpen: !menuState
+    this.setState((state, props) => {
+      return {
+        menuOpen: !menuState
+      }
     })
   }
 

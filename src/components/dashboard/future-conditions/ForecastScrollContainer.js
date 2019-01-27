@@ -57,7 +57,7 @@ export class ForecastScrollContainer extends Component {
   }
 
   /**
-   * View pealier forecasts by adding a positive translateX to the scrollview
+   * View earlier forecasts by adding a positive translateX to the scrollview
    */
   slideLeft = () => {
     const translateAmount = this.state.xAxisTransform + (100 / this.props.conditions.length)

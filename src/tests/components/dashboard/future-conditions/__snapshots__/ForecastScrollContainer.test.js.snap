@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ForecastScollContainer should create the component 1`] = `
+<div
+  className="forecastScrollContainer container"
+>
+  <h3
+    className="scrollTitle"
+  >
+    Future Forecast
+  </h3>
+  <div
+    className="scrollContainer"
+    style={
+      Object {
+        "transform": "translateX(0%)",
+        "width": "20%",
+      }
+    }
+  >
+    <div
+      className="dayConditonWrapper"
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <div
+        className="dayConditions"
+      >
+        <div
+          className="date"
+        >
+          10.26 4 AM
+        </div>
+        <div
+          className="conditionStatus"
+        >
+          <svg>
+            status_sunny.svg
+          </svg>
+        </div>
+        <div
+          className="conditions"
+        >
+          <h3 />
+          <p>
+            Current Temp
+          </p>
+          <h3>
+            32
+            <sup>
+              ° 
+              F
+            </sup>
+          </h3>
+          <p>
+            Wind Speed
+          </p>
+          <h4>
+            0
+             
+            <sup>
+              mph
+            </sup>
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="scrollControls"
+  >
+    <button
+      onClick={[Function]}
+      title="Previous"
+    >
+      <svg>
+        arrow.svg
+      </svg>
+    </button>
+    <button
+      onClick={[Function]}
+      title="Next"
+    >
+      <svg>
+        arrow.svg
+      </svg>
+    </button>
+  </div>
+</div>
+`;

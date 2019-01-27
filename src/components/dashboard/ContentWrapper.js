@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { CurrentConditions } from './current-conditions/CurrentConditions'
 import { ForecastScrollContainer } from './future-conditions/ForecastScrollContainer'
-import { FutureConditionsChart } from './future-conditions/FutureConditionsChart';
+import { FutureConditionsChart } from './future-conditions/FutureConditionsChart'
 
 export class ContentWrapper extends Component {
 

@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ZipCodeHistory should create the component 1`] = `
+<nav
+  className="zipCodeHistory"
+>
+  <button
+    className="menuToggle "
+    onClick={[Function]}
+    title="Open Menu"
+  >
+    <span />
+    <span />
+    <span />
+  </button>
+  <span>
+    Recent Locations
+  </span>
+  <ul
+    className=""
+  />
+</nav>
+`;
