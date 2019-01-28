@@ -28,15 +28,17 @@ export class ManagezipCodes extends Component {
   onReorder = ({oldIndex, newIndex}) => {
     this.setState(({zipCodes}) => ({
       zipCodes: arrayMove(zipCodes, oldIndex, newIndex),
-    }))
-
-    store.dispatch(setZipHistory(this.state.zipCodes))
+    }), () => {
+      store.dispatch(setZipHistory(this.state.zipCodes))
+    })
   }
 
   onDelete = (zipCode) => {
-    this.setState({
-      zipCodes: [...this.state.zipCodes.filter(code => code !== zipCode)]
-    },() => {
+    this.setState((state, props) => {
+      return {
+        zipCodes: [...this.state.zipCodes.filter(code => code !== zipCode)]
+      }
+    }, () => {
       store.dispatch(setZipHistory(this.state.zipCodes))
     })
   }
