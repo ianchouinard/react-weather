@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
-import { FutureConditions } from './FutureConditions'
-import { ReactComponent as Arrow } from './../../../img/arrow.svg'
+import { ReactComponent as Arrow } from './../img/arrow.svg'
 import PropTypes from 'prop-types'
 
-export class ForecastScrollContainer extends Component {
+export class ScrollContainer extends Component {
 
   state = {
     xAxisTransform: 0,
@@ -41,14 +40,14 @@ export class ForecastScrollContainer extends Component {
    * Get the width for the scrollable container based on the # of items
    */
   getScrollContainerWidth = () => {
-    return (this.props.conditions.length / this.state.itemsPerPane) * 100
+    return (this.props.items.length / this.state.itemsPerPane) * 100
   }
 
   /**
-   * View later forecasts by adding a negative translateX to the scroll view.
+   * View later items by adding a negative translateX to the scroll view.
    */
   slideRight = () => {
-    const translateAmount = (100 / this.props.conditions.length )
+    const translateAmount = (100 / this.props.items.length )
     const max = 100 - (translateAmount * this.state.itemsPerPane)
 
     if (Math.abs(this.state.xAxisTransform) < max) {
@@ -57,10 +56,10 @@ export class ForecastScrollContainer extends Component {
   }
 
   /**
-   * View earlier forecasts by adding a positive translateX to the scrollview
+   * View earlier items by adding a positive translateX to the scrollview
    */
   slideLeft = () => {
-    const translateAmount = this.state.xAxisTransform + (100 / this.props.conditions.length)
+    const translateAmount = this.state.xAxisTransform + (100 / this.props.items.length)
 
     if (translateAmount <= 0) {
       this.setState({xAxisTransform: translateAmount})
@@ -69,10 +68,10 @@ export class ForecastScrollContainer extends Component {
 
   render() {
     return (
-      <div className="forecastScrollContainer container">
+      <div className="ScrollContainer container">
         <h3 className="scrollTitle">Future Forecast</h3>
         <div className="scrollContainer" style={{ width: `${this.getScrollContainerWidth()}%`, transform: `translateX(${this.state.xAxisTransform}%)` }}>
-          <FutureConditions conditions={this.props.conditions} />
+          {this.props.children}
         </div>
 
         <div className="scrollControls">
@@ -85,6 +84,6 @@ export class ForecastScrollContainer extends Component {
 
 }
 
-ForecastScrollContainer.propTypes = {
-  conditions: PropTypes.array.isRequired
+ScrollContainer.propTypes = {
+  items: PropTypes.array.isRequired
 }
