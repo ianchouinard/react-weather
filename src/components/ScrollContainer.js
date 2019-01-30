@@ -69,7 +69,7 @@ export class ScrollContainer extends Component {
   render() {
     return (
       <div className="ScrollContainer container">
-        <h3 className="scrollTitle">Future Forecast</h3>
+        <h3 className="scrollTitle">{ this.props.title }</h3>
         <div className="scrollContainer" style={{ width: `${this.getScrollContainerWidth()}%`, transform: `translateX(${this.state.xAxisTransform}%)` }}>
           {this.props.children}
         </div>
