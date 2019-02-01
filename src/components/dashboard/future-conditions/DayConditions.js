@@ -17,7 +17,9 @@ export class DayConditions extends Component {
           <ConditionIcon icon={currentConditions.weather[0] ? currentConditions.weather[0].icon : ''} />
         </div>
 
-        <Conditions conditions={currentConditions} />
+        <Conditions
+          conditions={currentConditions}
+          title={`Conditions for ${Transforms.date(this.props.currentConditions.dt)}`} />
       </div>
     )
   }

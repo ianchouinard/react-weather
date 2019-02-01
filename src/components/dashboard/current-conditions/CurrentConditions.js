@@ -16,7 +16,7 @@ export class CurrentConditions extends Component {
 
         <div className="conditionsContent">
           <ConditionIcon icon={currentConditions.weather[0] ? currentConditions.weather[0].icon : null} />
-          <Conditions conditions={currentConditions} />
+          <Conditions conditions={currentConditions} title={'Current Conditions'} />
         </div>
       </div>
     )
