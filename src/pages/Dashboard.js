@@ -45,34 +45,24 @@ export class Dashboard extends Component {
       zipCode: zipCode
     })
 
-    Axios.get(CurrentConditionsUrl(zipCode, unitType))
-      .then(res => {
-        this.setState({
-          currentConditionsLoaded: true,
-          currentConditions: res.data,
-          isLoadingConditions: false
-        });
+    Axios.all([
+      Axios.get(CurrentConditionsUrl(zipCode, unitType)),
+      Axios.get(ForecastUrl(zipCode, unitType))
+    ]).then(Axios.spread((res1, res2) => {
+      this.setState({
+        currentConditionsLoaded: true,
+        currentConditions: res1.data,
+        isLoadingConditions: false,
+        futureConditions: res2.data.list
       })
-      .catch(error => {
-        if (error.response && error.response.status === 404) {
-          // Only going to show an alert for a 404 for one of these api calls.
-          alert('Location for the zip code not found. Please try another zip code')
-        } else {
-          alert('There was a problem getting current conditions. Please try again in a few minutes.')
-        }
-
-        this.setState({isLoadingConditions: false})
-        store.dispatch(removeZipHistory(zipCode))
-      });
-
-    Axios.get(ForecastUrl(zipCode, unitType))
-      .then(res => {
-        this.setState({ futureConditions: res.data.list })
-      })
-      .catch(error => {
-        alert('There was a problem getting the future forecast. Please try again in a few minutes.')
-        this.setState({isLoadingConditions: false})
-      });
+    }))
+    .catch(error => {
+      alert(
+      `There was a problem getting current conditions. Please try again in a few minutes or try another zip code.`
+      );
+      this.setState({isLoadingConditions: false})
+      store.dispatch(removeZipHistory(zipCode))
+    })
   }
 
   render() {
