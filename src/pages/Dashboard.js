@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { store } from './../store/store'
 import { WeatherToolbar } from './../components/dashboard/toolbar/WeatherToolbar'
-import { CurrentConditionsUrl, ForecastUrl } from './../Constants'
+import { CurrentConditionsUrl, ForecastUrl } from './../api/ForecastApi'
 import { ContentWrapper } from './../components/dashboard/ContentWrapper'
 import Axios from 'axios'
 import { removeZipHistory } from '../actions/ForecastActions';
